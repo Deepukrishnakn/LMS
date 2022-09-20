@@ -1,0 +1,24 @@
+*{
+    scroll-behavior: calc();
+}
+.title{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(49, 90, 8);
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    font-size: 40px;
+}
+.bookcard{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    z-index: 1;
+}
+.bg{
+    overflow: hidden;
+    object-fit: fill;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhct9ZGpOhO9eT4OeiCWgqTVxQbFg-obj3_w&usqp=CAU);
+}

@@ -1,0 +1,38 @@
+.login_h1 { 
+    font-size: 35px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    letter-spacing: -1px;
+    color: rgb(118, 26, 141);
+    text-align: center;
+    outline: none;
+    font-family: "Inter";
+    font-size: 55px;
+}
+
+
+.loginbody{
+    
+    border-radius: 2rem;
+    min-width: 380px;
+    padding: 20px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    outline: none;
+    border: 1px solid rgba(0,80,40,0,54);
+    font-family: "Inter";
+    border-radius: 2rem;
+    font-size: 18px;
+}
+
+.signupbg{
+    background-color: rgb(108, 161, 182);
+}
+
+.login_form{
+    display: flex;
+    flex-direction: column;
+}
+.loginbg{
+    background-color: rgb(151, 214, 206);
+}
