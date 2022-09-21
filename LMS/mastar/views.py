@@ -48,23 +48,9 @@ class BooksViewset(viewsets.ModelViewSet):
     serializer_class = BookSerializer
 
 
-# @api_view(['PUT'])
-# @authentication_classes([JWTAuthentication])
-# def editbook(request,id):
-#     try:
-#         book=Book.objects.get(id=id)
-#         edit=BookSerializer(instance=book,data=request.data)
-#         if edit.is_valid():
-#             edit.save()
-#         return Response(edit.data)
-#     except:
-#         response=Response()
-#         response.data={
-#             'message':'somthing Wrong '
-#         }
-#         return response  
+ 
 
-@api_view(['PUT'])
+@api_view(['PATCH'])
 @authentication_classes([JWTAuthentication])
 def editbook(request,id):
     try:
