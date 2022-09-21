@@ -12,9 +12,9 @@ function Hnavebar() {
 <Container>
       <Navbar expand="lg" variant="light" bg="light">
         <Container>
-          <Navbar.Brand href="#">Navbar</Navbar.Brand>
-          <Navbar.Brand href="#">Add Book</Navbar.Brand>
-          <Navbar.Brand href="" onClick={userLogout}>Log out</Navbar.Brand>
+        <Link to='/'> <Navbar.Brand href="">Home</Navbar.Brand></Link>
+          <Navbar.Brand href="#" className='title'>School Library</Navbar.Brand>
+          <Link to='/Login'> <Navbar.Brand href="" >Admin Login</Navbar.Brand></Link>
           
         </Container>
       </Navbar>

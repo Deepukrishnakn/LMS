@@ -42,6 +42,7 @@ function AllBooks() {
           <th>Book Name</th>
           <th>Author Name</th>
           <th>Category</th>
+          <th>Price</th>
           <th>Edit</th>
           <th>Remove</th>
         </tr>

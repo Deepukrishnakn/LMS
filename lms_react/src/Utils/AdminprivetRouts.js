@@ -6,7 +6,7 @@ function AdminprivetRouts() {
     let {authTokens} = useContext(AuthContext)
     console.log(authTokens)
 
-    return authTokens.isAdmin ? <Outlet/>: <Navigate to='/'></Navigate>
+    return authTokens ? <Outlet/>: <Navigate to='/Login'></Navigate>
 }
 
 export default AdminprivetRouts

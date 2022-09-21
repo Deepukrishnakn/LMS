@@ -7,7 +7,7 @@ function OnlyAdminPrivetRoutes() {
 
     let {authTokens} = useContext(AuthContext)
    
-    return authTokens.isAdmin ?  <Navigate to='/adminhome'></Navigate>: <Outlet/>
+    return authTokens ?  <Navigate to='/adminhome'></Navigate>: <Outlet/>
 }
 
 export default OnlyAdminPrivetRoutes

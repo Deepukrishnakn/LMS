@@ -8,17 +8,21 @@
     font-weight: 500;
     letter-spacing: 0.3em;
     font-size: 40px;
+    text-decoration: none;
 }
 .bookcard{
     width: 100%;
     max-width: 1024px;
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 2px;
     z-index: 1;
 }
 .bg{
     overflow: hidden;
     object-fit: fill;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhct9ZGpOhO9eT4OeiCWgqTVxQbFg-obj3_w&usqp=CAU);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(https://gameanalytics.com/wp-content/uploads/2022/08/Marketing-Library-Cover-min-616x500.png);
 }

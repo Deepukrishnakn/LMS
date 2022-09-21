@@ -40,7 +40,7 @@ function AdminHome() {
         <Card.Text>
         Category {obj.category.category_name}
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">Read</Button>
       </Card.Body>
     </Card>
     </Col>

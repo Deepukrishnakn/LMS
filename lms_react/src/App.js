@@ -22,11 +22,11 @@ function App(){
      <AuthProvider>
       <Routes>
       <Route path='register/' element ={<RegisterPage/>} />
-      <Route path='/' element ={<LoginPage/>} />
+      <Route path='/login' element ={<LoginPage/>} />
 
-      <Route element ={<PrivetRouts/>}>
+      {/* <Route element ={<PrivetRouts/>}> */}
       <Route element ={<OnlyAdminPrivetRoutes/>}> 
-      <Route path='/home' element ={<HomePage/>} />
+      <Route path='/' element ={<HomePage/>} />
       </Route>
       <Route element={<AdminprivetRouts/>} >
       <Route path='/addbook' element ={<AddBook/>} />
@@ -34,7 +34,7 @@ function App(){
       <Route path='/allbooks' element ={<AllBooks/>} />
       <Route path='/editbook/:id' element ={<EditBook/>} />
       </Route>
-      </Route>
+      {/* </Route> */}
 
     </Routes>
     </AuthProvider>

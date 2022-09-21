@@ -21,11 +21,12 @@ function Home() {
   }, [])
   
   return (
-    <div className='bookcard'>
-      <Row className='m-5 bookcard'>
+    <div className=''>
+      <Row>
+      <h1 className='title mt-5'>Find Your Book</h1>
    {book.map((obj)=>
-       <Col lg={3}>
-        <Card style={{ width: '18rem' }} >
+       <Col lg={4}>
+        <Card className='m-5'>
       <Card.Img variant="top" src={obj.image}/>
       <Card.Body>
         <Card.Title>{obj.book_name}</Card.Title>
@@ -36,9 +37,9 @@ function Home() {
         Author: {obj.author}
         </Card.Text>
         <Card.Text>
-        Category {obj.category.category_name}
+        Category: {obj.category.category_name}
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">Read</Button>
       </Card.Body>
     </Card>
     </Col>

@@ -1,14 +1,14 @@
-import React,{useContext} from 'react'
-import {Outlet,Navigate} from 'react-router-dom'
-import AuthContext from '../context/authContext'
+// import React,{useContext} from 'react'
+// import {Outlet,Navigate} from 'react-router-dom'
+// import AuthContext from '../context/authContext'
 
 
-function PrivetRouts() {
+// function PrivetRouts() {
 
-    let {authTokens} = useContext(AuthContext)
+//     let {authTokens} = useContext(AuthContext)
    
-    return authTokens ? <Outlet/>: <Navigate to='/'></Navigate>
+//     return authTokens ? <Outlet/>: <Navigate to='/Login'></Navigate>
   
-}
+// }
 
-export default PrivetRouts
+// export default PrivetRouts

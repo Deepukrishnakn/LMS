@@ -28,8 +28,8 @@ const userLogin= async (email,password)=>{
         if(response.data.token){
             localStorage.setItem('authTokens',JSON.stringify(response.data))
             localStorage.setItem('user',JSON.stringify(jwt_decode(response.data.token)))
-            response.data.token.is_superusre? navigate('/adminhome'):
-            navigate( '/home' )
+           
+            navigate( '/adminhome' )
         }
 
        if(response.data.message){
