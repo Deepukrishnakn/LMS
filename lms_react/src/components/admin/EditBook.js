@@ -59,7 +59,7 @@ function EditBook() {
         bookData.append('category',category_id)
         bookData.append('is_available',is_available)
         
-    await axios.put(`mastar/editbook/${id}/`,bookData,    
+    await axios.patch(`mastar/editbook/${id}/`,bookData,    
     {headers:{Authorization:`Bearer ${authTokens?.token}`, 'content-type': 'multipart/form-data'} } ).then((response)=>{
       console.log(response.data)
       if (response.status===200){
