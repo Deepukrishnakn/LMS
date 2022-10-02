@@ -50,7 +50,6 @@ class LoginAPIView(APIView):
                 'message':'Invalid email'
             }
             return response        
-            raise exceptions.AuthenticationFailed('Invalid email')
 
         if not user.check_password(password):
             response = Response()
@@ -59,7 +58,6 @@ class LoginAPIView(APIView):
                 'message':'invalid password'
             }
             return response        
-            raise exceptions.AuthenticationFailed('Invalid password')
 
         user = auth.authenticate(email=email, password=password)
         if user:

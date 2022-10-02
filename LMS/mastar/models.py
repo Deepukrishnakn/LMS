@@ -1,3 +1,4 @@
+
 from accounts.models import Account
 from django.db import models
 from django.urls import reverse
@@ -32,3 +33,24 @@ class Book(models.Model):
     
     def __str__(self):
         return self.book_name
+
+
+#book Rating and Reviews
+
+class BookRating(models.Model):
+    user = models.ForeignKey(Account,on_delete=models.CASCADE,related_name='rating_user')
+    book = models.ForeignKey(Book,on_delete=models.CASCADE,related_name='book_rating')
+    rating = models.IntegerField()
+    reviews = models.TextField()
+    add_time = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.rating} - {self.reviews}'
+
+
+class Favorite(models.Model):
+    user = models.ForeignKey(Account,on_delete=models.CASCADE,related_name='user_Favorite')
+    book = models.ForeignKey(Book,on_delete=models.CASCADE,related_name='Favorite_book')
+    Like = models.BooleanField(default=False)
+    add_date =models.DateTimeField(auto_now_add=True)
+    modified_date = models.DateTimeField(auto_now=True)

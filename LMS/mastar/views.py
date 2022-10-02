@@ -3,8 +3,8 @@ from rest_framework.decorators import api_view,authentication_classes
 from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
 from rest_framework import status,exceptions
-from .serializers import BookSerializer,CategorySerializer, EditSerializer
-from .models import Book,Category
+from .serializers import BookRatingSerializer, BookSerializer,CategorySerializer, EditSerializer, FavoriteBookSerializer
+from .models import Book, BookRating,Category, Favorite
 from accounts.authentication import JWTAuthentication
 from rest_framework import viewsets
 # Create your views here.
@@ -49,7 +49,6 @@ class BooksViewset(viewsets.ModelViewSet):
 
 
  
-
 @api_view(['PATCH'])
 @authentication_classes([JWTAuthentication])
 def editbook(request,id):
@@ -64,6 +63,18 @@ def editbook(request,id):
     except:
         response=Response()
         response.data={
-            'message':'password miss match '
+            'message':'somthing Wrong'
         }
         return response  
+
+
+#rating viewset
+class BooksRatingViewset(viewsets.ModelViewSet):
+    queryset = BookRating.objects.all()
+    serializer_class = BookRatingSerializer
+
+
+#Favorite
+class FavoriteBooksViewset(viewsets.ModelViewSet):
+    queryset = Favorite.objects.all()
+    serializer_class = FavoriteBookSerializer
